@@ -51,6 +51,8 @@ const skillCategories = [
       { name: "C++", icon: SiCplusplus },
       { name: "TypeScript", icon: SiTypescript },
       { name: "C", icon: SiC },
+       { name: "NumPy", icon: SiPython },     // Use Python icon for NumPy
+    { name: "Pandas", icon: SiPython },
     ],
   },
   {
