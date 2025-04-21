@@ -7,7 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
-import { Mail, Linkedin, Github, Phone } from "lucide-react"
+import { Mail, Linkedin, Github, Phone,Globe, Code2 } from "lucide-react"
 
 export default function ContactPage() {
   const formRef = useRef(null)
@@ -91,6 +91,9 @@ export default function ContactPage() {
               <ContactInfo icon={<Linkedin className="h-6 w-6 text-primary" />} title="LinkedIn" value="Abhishek Jaiswal" link="https://www.linkedin.com/in/abhishek-jaiswal-278890246/" />
               <ContactInfo icon={<Github className="h-6 w-6 text-primary" />} title="GitHub" value="@Abhijaiswal2522002" link="https://github.com/Abhijaiswal2522002" />
               <ContactInfo icon={<Phone className="h-6 w-6 text-primary" />} title="Phone" value="+91 8690896522" />
+              <ContactInfo icon={<Globe className="h-6 w-6 text-primary" />} title="Kaggle" value="Abhishek Jaiswal" link="https://www.kaggle.com/abhishek2522" />
+              <ContactInfo icon={<Globe className="h-6 w-6 text-primary" />} title="Kaggle" value="Abhishek Jaiswal" link="https://www.kaggle.com/abhishek2522" />
+<ContactInfo icon={<Code2 className="h-6 w-6 text-primary" />} title="LeetCode" value="AbhishekJaiswal" link="https://leetcode.com/abhishek2522/" />
             </div>
           </motion.div>
         </div>
