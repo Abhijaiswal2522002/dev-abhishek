@@ -92,8 +92,8 @@ export default function ContactPage() {
               <ContactInfo icon={<Github className="h-6 w-6 text-primary" />} title="GitHub" value="@Abhijaiswal2522002" link="https://github.com/Abhijaiswal2522002" />
               <ContactInfo icon={<Phone className="h-6 w-6 text-primary" />} title="Phone" value="+91 8690896522" />
               <ContactInfo icon={<Globe className="h-6 w-6 text-primary" />} title="Kaggle" value="Abhishek Jaiswal" link="https://www.kaggle.com/abhishek2522" />
-              <ContactInfo icon={<Globe className="h-6 w-6 text-primary" />} title="Kaggle" value="Abhishek Jaiswal" link="https://www.kaggle.com/abhishek2522" />
-<ContactInfo icon={<Code2 className="h-6 w-6 text-primary" />} title="LeetCode" value="AbhishekJaiswal" link="https://leetcode.com/abhishek2522/" />
+              <ContactInfo icon={<Globe className="h-6 w-6 text-primary" />} title="Kaggle" value="Abhishek Jaiswal" link="https://www.kaggle.com/abj252002" />
+<ContactInfo icon={<Code2 className="h-6 w-6 text-primary" />} title="LeetCode" value="AbhishekJaiswal" link="https://leetcode.com/u/Abhishek252002/" />
             </div>
           </motion.div>
         </div>
