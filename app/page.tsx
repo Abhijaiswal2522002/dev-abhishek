@@ -46,7 +46,7 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <a href="/r.pdf" download>
+          <a href="/Abhishek Resume.pdf" download>
   <Button
     size="lg"
     className="gap-2 bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity"
