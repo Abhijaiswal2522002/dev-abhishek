@@ -32,7 +32,16 @@ const projects = [
       github: "https://github.com/Abhijaiswal2522002/Ai-summarizer",
       demo: "https://67249488cf9357fe0e030a78--ai-summmarizzer.netlify.app/",
       image: "/ai.png",
-    },
+    },{
+  name: "MedRoute",
+  description:
+    "A medicine auction and delivery platform that connects buyers and sellers in real-time. Features include live bidding, user authentication, order tracking, and secure payments. Built for better accessibility to essential medicines.",
+  techStack: "Next.js, Node.js, Express, MongoDB, Tailwind CSS, Socket.io, Stripe",
+  github: "https://github.com/Abhijaiswal2522002/MedR",
+  demo: "med-r-c9vd.vercel.app/",
+  image: "/medroute.png",
+}
+
   ]
   
 
