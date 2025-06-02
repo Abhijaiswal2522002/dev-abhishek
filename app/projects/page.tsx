@@ -38,7 +38,7 @@ const projects = [
     "A medicine auction and delivery platform that connects buyers and sellers in real-time. Features include live bidding, user authentication, order tracking, and secure payments. Built for better accessibility to essential medicines.",
   techStack: "Next.js, Node.js, Express, MongoDB, Tailwind CSS, Socket.io, Stripe",
   github: "https://github.com/Abhijaiswal2522002/MedR",
-  demo: "med-r-c9vd.vercel.app/",
+  demo: "https://med-r-c9vd.vercel.app/",
   image: "/medroute.png",
 }
 
