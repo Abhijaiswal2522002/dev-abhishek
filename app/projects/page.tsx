@@ -6,7 +6,15 @@ import { Button } from "@/components/ui/button"
 import { Github, ExternalLink } from "lucide-react"
 
 const projects = [
-    {
+   {
+  name: "MedRoute",
+  description:
+    "A medicine auction and delivery platform that connects buyers and sellers in real-time. Features include live bidding, user authentication, order tracking, and secure payments. Built for better accessibility to essential medicines.",
+  techStack: "Next.js, Node.js, Express, MongoDB, Tailwind CSS, Socket.io, Stripe",
+  github: "https://github.com/Abhijaiswal2522002/MedR",
+  demo: "https://med-r-c9vd.vercel.app/",
+  image: "/medroute.png",
+}, {
       name: "Fitnessx",
       description:
         "A personalized fitness tracking web app designed to help users achieve their fitness goals on a budget. Includes workout planning, diet recommendations, BMI tracking, and progress visualization.",
@@ -32,15 +40,7 @@ const projects = [
       github: "https://github.com/Abhijaiswal2522002/Ai-summarizer",
       demo: "https://67249488cf9357fe0e030a78--ai-summmarizzer.netlify.app/",
       image: "/ai.png",
-    },{
-  name: "MedRoute",
-  description:
-    "A medicine auction and delivery platform that connects buyers and sellers in real-time. Features include live bidding, user authentication, order tracking, and secure payments. Built for better accessibility to essential medicines.",
-  techStack: "Next.js, Node.js, Express, MongoDB, Tailwind CSS, Socket.io, Stripe",
-  github: "https://github.com/Abhijaiswal2522002/MedR",
-  demo: "https://med-r-c9vd.vercel.app/",
-  image: "/medroute.png",
-}
+    }
 
   ]
   
