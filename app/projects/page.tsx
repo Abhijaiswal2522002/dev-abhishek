@@ -14,7 +14,16 @@ const projects = [
   github: "https://github.com/Abhijaiswal2522002/MedR",
   demo: "https://med-r-c9vd.vercel.app/",
   image: "/medroute.png",
-}, {
+},
+     {
+      name: "TalentEzee - Influencer Engagement Platform",
+      description:
+        "A comprehensive frontend onboarding module built for TalentEzee.com, designed to manage influencer engagements with a clean, responsive interface using Next.js..",
+      techStack: "Next.js, Redux, Tailwind CSS,PostSql,Ui/Ux",
+      github: "https://github.com/Abhijaiswal2522002/TalentEzee",
+      demo: "https://talent-ezee.vercel.app/",
+      image: "/TalentEzee.png",
+    },{
       name: "Fitnessx",
       description:
         "A personalized fitness tracking web app designed to help users achieve their fitness goals on a budget. Includes workout planning, diet recommendations, BMI tracking, and progress visualization.",
