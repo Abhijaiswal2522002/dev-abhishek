@@ -42,35 +42,38 @@ export default function AboutPage() {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <p className="text-lg mb-4">
-            I'm a full-stack web developer with 2+ years of experience building scalable, responsive, and user-centric web applications. I specialize in modern technologies like React.js, Next.js, Node.js, Express.js, MongoDB, and Django. As the founder of <strong>Dcoder</strong>, a tech startup focused on AI-driven solutions, I enjoy turning ideas into impactful products. I'm also passionate about Data Structures and Algorithms (DSA), constantly sharpening my problem-solving skills. From real-time chat apps and AI-powered bots to e-commerce platforms and healthcare systems, I strive to build technology that solves real-world problems and drives innovation.
+              I’m a <strong>full-stack web developer</strong> and <strong>.NET software engineer</strong> with experience in
+              <strong> C#, ASP.NET MVC, .NET Core, MS SQL Server</strong>, and modern JavaScript frameworks.
+              My expertise spans <strong>React.js, Next.js, Node.js, Express.js</strong>, and database technologies like
+              <strong> MongoDB</strong> and <strong>SQL Server</strong>.  
+              I’ve worked on projects involving <strong>manual testing, functional testing, regression testing</strong>,
+              and cybersecurity tools like <strong>Burp Suite</strong> and <strong>Wireshark</strong>.
+              I thrive on building secure, scalable, and client-focused solutions that solve real-world problems.
             </p>
 
             <h3 className="text-xl font-semibold mb-2">Education</h3>
-            <p className="mb-4">Ajay Kumar Garg Engineering College</p>
+            <p className="mb-4">B.Tech in Information Technology – Ajay Kumar Garg Engineering College</p>
 
             <h3 className="text-xl font-semibold mb-2">Experience Highlights</h3>
-<ul className="list-disc list-inside mb-4">
-  <li>Internships at Bluestock, Internbix, and Oasis Infobyte</li>
-  <li>Led development of a full-stack chat application with real-time messaging</li>
-  <li>Developed an e-commerce website and a healthcare booking platform</li>
-  <li>Founded <strong>Dcoder</strong> — a tech startup focused on AI-driven solutions</li>
-  <li>Contributed to several full-stack projects using React, Next.js, and MongoDB</li>
-  <li>Actively practice Data Structures & Algorithms to enhance problem-solving skills</li>
-</ul>
+            <ul className="list-disc list-inside mb-4">
+              <li>Currently at <strong>Jureli Tech</strong> (Jul 2025 – Present) developing enterprise-grade ASP.NET MVC modules, optimizing SQL queries, and implementing secure JWT authentication with client collaboration.</li>
+              <li>Worked at <strong>A1QA</strong> (Jun 2025 – Jul 2025) executing manual & automated test cases, defect tracking in Jira, and ensuring quality through SDLC/STLC processes.</li>
+              <li>At <strong>InternBix</strong> (Nov 2024 – Jun 2025), developed full-stack features in React.js, Node.js, and MongoDB, while working closely with clients to gather requirements and deliver secure, timely solutions.</li>
+              <li>Founded <strong>Dcoder</strong>, a tech startup delivering AI-driven solutions with a focus on performance, scalability, and innovation.</li>
+            </ul>
 
-
-<h3 className="text-xl font-semibold mb-2">Favorite Technologies</h3>
-<p className="mb-4">
-  I enjoy working with modern web technologies that help build fast, scalable, and user-friendly applications. Some of my go-to tools and frameworks include:
-</p>
-<ul className="list-disc list-inside">
-  <li>React.js & Next.js – for building dynamic, interactive frontends</li>
-  <li>Node.js & Express.js – for creating efficient and scalable backend services</li>
-  <li>Django – for building secure and robust web applications with Python</li>
-  <li>MongoDB – for flexible NoSQL database solutions</li>
-  <li>Tailwind CSS & Styled Components – for responsive and component-based UI styling</li>
-</ul>
-
+            <h3 className="text-xl font-semibold mb-2">Favorite Technologies</h3>
+            <p className="mb-4">
+              I enjoy working with a mix of web, backend, and testing tools that ensure both functionality and security:
+            </p>
+            <ul className="list-disc list-inside">
+              <li>C#, ASP.NET MVC, .NET Core & MS SQL Server – for secure, scalable enterprise backend systems</li>
+              <li>React.js & Next.js – for dynamic, user-focused frontends</li>
+              <li>Node.js & Express.js – for fast, reliable API development</li>
+              <li>MongoDB & PostgreSQL – for flexible, high-performance database solutions</li>
+              <li>Burp Suite, Wireshark, and Jira – for cybersecurity testing and QA process management</li>
+              <li>Tailwind CSS & Styled Components – for responsive, modern UI design</li>
+            </ul>
           </motion.div>
         </div>
       </div>
