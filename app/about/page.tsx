@@ -17,6 +17,7 @@ export default function AboutPage() {
         </motion.h1>
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
+          {/* Profile Image */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -36,44 +37,55 @@ export default function AboutPage() {
             </div>
           </motion.div>
 
+          {/* About Info */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <p className="text-lg mb-4">
-              I’m a <strong>full-stack web developer</strong> and <strong>.NET software engineer</strong> with experience in
-              <strong> C#, ASP.NET MVC, .NET Core, MS SQL Server</strong>, and modern JavaScript frameworks.
-              My expertise spans <strong>React.js, Next.js, Node.js, Express.js</strong>, and database technologies like
+            <p className="text-lg mb-6 leading-relaxed">
+              I am a <strong>full-stack web developer</strong> and <strong>.NET software engineer</strong> with experience in
+              <strong> C#, ASP.NET MVC, .NET Core, MS SQL Server</strong> and modern JavaScript frameworks.
+              I build applications using <strong>React.js, Next.js, Node.js, Express.js</strong>, and work with databases like
               <strong> MongoDB</strong> and <strong>SQL Server</strong>.  
-              I’ve worked on projects involving <strong>manual testing, functional testing, regression testing</strong>,
-              and cybersecurity tools like <strong>Burp Suite</strong> and <strong>Wireshark</strong>.
-              I thrive on building secure, scalable, and client-focused solutions that solve real-world problems.
+              I also have experience in QA and cybersecurity, working with tools such as <strong>Burp Suite</strong> and <strong>Wireshark</strong>.  
+              My focus is on developing secure, scalable, and user-friendly solutions.
             </p>
 
-            <h3 className="text-xl font-semibold mb-2">Education</h3>
-            <p className="mb-4">B.Tech in Information Technology – Ajay Kumar Garg Engineering College</p>
+            <section className="mb-6">
+              <h3 className="text-xl font-semibold mb-2">Education</h3>
+              <p>B.Tech in Information Technology – Ajay Kumar Garg Engineering College</p>
+            </section>
 
-            <h3 className="text-xl font-semibold mb-2">Experience Highlights</h3>
-            <ul className="list-disc list-inside mb-4">
-              <li>Currently at <strong>Jureli Tech</strong> (Jul 2025 – Present) developing enterprise-grade ASP.NET MVC modules, optimizing SQL queries, and implementing secure JWT authentication with client collaboration.</li>
-              <li>Worked at <strong>A1QA</strong> (Jun 2025 – Jul 2025) executing manual & automated test cases, defect tracking in Jira, and ensuring quality through SDLC/STLC processes.</li>
-              <li>At <strong>InternBix</strong> (Nov 2024 – Jun 2025), developed full-stack features in React.js, Node.js, and MongoDB, while working closely with clients to gather requirements and deliver secure, timely solutions.</li>
-              <li>Founded <strong>Dcoder</strong>, a tech startup delivering AI-driven solutions with a focus on performance, scalability, and innovation.</li>
-            </ul>
+            <section className="mb-6">
+              <h3 className="text-xl font-semibold mb-2">Experience Highlights</h3>
+              <ul className="list-disc list-inside space-y-2">
+                <li>
+                  <strong>Jureli Tech</strong> (.NET Software Engineer Intern, Jul 2025 – Present): Developing ASP.NET MVC modules, managing SQL Server databases, and implementing secure JWT authentication while collaborating with clients.
+                </li>
+                <li>
+                  <strong>A1QA</strong> (QA Functional Testing Intern, Jun 2025 – Jul 2025): Conducted manual and automated testing, documented defects, and collaborated with developers to maintain application quality.
+                </li>
+                <li>
+                  <strong>InternBix</strong> (Nov 2024 – Jun 2025): Built full-stack features with React.js, Node.js, and MongoDB, ensuring secure and timely solutions while interacting with clients for requirements.
+                </li>
+                <li>
+                  <strong>Dcoder</strong>: Founded a tech startup delivering AI-driven solutions focused on performance, scalability, and innovation.
+                </li>
+              </ul>
+            </section>
 
-            <h3 className="text-xl font-semibold mb-2">Favorite Technologies</h3>
-            <p className="mb-4">
-              I enjoy working with a mix of web, backend, and testing tools that ensure both functionality and security:
-            </p>
-            <ul className="list-disc list-inside">
-              <li>C#, ASP.NET MVC, .NET Core & MS SQL Server – for secure, scalable enterprise backend systems</li>
-              <li>React.js & Next.js – for dynamic, user-focused frontends</li>
-              <li>Node.js & Express.js – for fast, reliable API development</li>
-              <li>MongoDB & PostgreSQL – for flexible, high-performance database solutions</li>
-              <li>Burp Suite, Wireshark, and Jira – for cybersecurity testing and QA process management</li>
-              <li>Tailwind CSS & Styled Components – for responsive, modern UI design</li>
-            </ul>
+            <section>
+              <h3 className="text-xl font-semibold mb-2">Favorite Technologies</h3>
+              <ul className="list-disc list-inside space-y-1">
+                <li>C#, ASP.NET MVC, .NET Core & MS SQL Server – enterprise backend systems</li>
+                <li>React.js & Next.js – dynamic frontends</li>
+                <li>Node.js & Express.js – API development</li>
+                <li>MongoDB & PostgreSQL – databases</li>
+                <li>Burp Suite, Wireshark, Jira – QA and cybersecurity tools</li>
+                <li>Tailwind CSS & Styled Components – modern, responsive UI</li>
+              </ul>
+            </section>
           </motion.div>
         </div>
       </div>
