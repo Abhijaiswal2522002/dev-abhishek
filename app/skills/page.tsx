@@ -8,8 +8,6 @@ import {
   SiCplusplus,
   SiTypescript,
   SiC,
-  SiCsharp,
-  SiDotnet,
   SiReact,
   SiNextdotjs,
   SiTailwindcss,
@@ -21,7 +19,6 @@ import {
   SiDjango,
   SiMongodb,
   SiPostgresql,
-  SiMicrosoftsqlserver,
   SiSocketdotio,
   SiApollographql,
   SiGit,
@@ -35,8 +32,6 @@ import {
   SiOpenai,
   SiNodemon,
   SiPuppeteer,
-  SiBurpsuite,
-  SiWireshark,
 } from "react-icons/si"
 import {
   Code,
@@ -57,8 +52,6 @@ const skillCategories = [
       { name: "TypeScript", icon: SiTypescript },
       { name: "C", icon: SiC },
       { name: "C#", icon: SiCsharp },
-      { name: "NumPy", icon: SiPython },
-      { name: "Pandas", icon: SiPython },
     ],
   },
   {
@@ -86,9 +79,6 @@ const skillCategories = [
       { name: "MongoDB", icon: SiMongodb },
       { name: "MS SQL Server", icon: SiMicrosoftsqlserver },
       { name: "PostgreSQL", icon: SiPostgresql },
-      { name: "Socket.IO", icon: SiSocketdotio },
-      { name: "REST APIs", icon: SiApollographql },
-      { name: "JWT Auth", icon: SiJsonwebtokens },
     ],
   },
   {
