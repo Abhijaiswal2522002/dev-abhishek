@@ -27,16 +27,6 @@ const projects = [
     icons: [Code2, Database, Globe],
   },
   {
-    name: "Fitnessx",
-    description:
-      "A personalized fitness tracking web app designed to help users achieve their fitness goals on a budget. Includes workout planning, diet recommendations, BMI tracking, and progress visualization.",
-    techStack: "React.js, Node.js, Express.js, MongoDB, Tailwind CSS",
-    github: "https://github.com/Abhijaiswal2522002/fitnessx",
-    demo: "https://fitfusion-demo.vercel.app",
-    image: "/Fittrack.png",
-    icons: [Code2, Server, Database],
-  },
-  {
     name: "SchoolOne",
     description:
       "A centralized school management web app providing notes, lectures, events, tutor booking, peer mentoring, and real-time announcements for students.",
