@@ -11,6 +11,13 @@ const experiences = [
     description:
       "Developed and maintained web applications using React.js and Node.js. Implemented RESTful APIs and integrated third-party services.",
     link: "https://bluestock.in",
+  },{
+    position: "Founder",
+    company: "Dcoder",
+    period: "Aug 2024 - Present",
+    description:
+      "Founded Dcoder, a tech startup providing AI-driven solutions. Led product development, engaged with clients to align solutions with their needs, oversaw business strategy, and managed technical implementation across full-stack platforms.",
+    link: "https://d-coder-s.netlify.app/home",
   },
   {
     position: "Web Developer Intern",
@@ -21,29 +28,22 @@ const experiences = [
     link: "https://internbix.com/",
   },
   {
-    position: ".NET Software Engineer Intern",
-    company: "Jureli Tech",
-    period: "Jul 2025 - Present",
-    description:
-      "Developing and maintaining enterprise-grade modules in ASP.NET MVC and C#. Optimizing MS SQL Server queries to improve API response times by 18%. Engaging with clients to understand requirements, discuss progress, and ensure deliverables meet quality and security standards. Implemented secure JWT-based authentication and role-based access control, reducing vulnerabilities by 30%.",
-    link: "https://www.jureli.com/",
-  },
-  {
-    position: "QA Functional Testing Intern",
-    company: "A1QA",
-    period: "Jun 2025 - Jul 2025",
-    description:
-      "Executed manual and automated test cases for web and mobile applications, detecting and documenting 50+ defects in Jira with 95% reproducibility. Performed functional, regression, and UI/UX testing aligned with SDLC and STLC best practices, reducing post-release issues by 15%. Collaborated with developers and stakeholders to clarify requirements and validate fixes.",
-    link: "https://www.a1qa.com/",
-  },
-  {
-    position: "Founder",
-    company: "Dcoder",
-    period: "Aug 2024 - Present",
-    description:
-      "Founded Dcoder, a tech startup providing AI-driven solutions. Led product development, engaged with clients to align solutions with their needs, oversaw business strategy, and managed technical implementation across full-stack platforms.",
-    link: "https://d-coder-s.netlify.app/home",
-  },
+  position: "QA Functional Testing Intern",
+  company: "A1QA",
+  period: "Jun 2025 - Jul 2025",
+  description:
+    "Participated in testing web and mobile applications through manual and automated approaches. Conducted functional, regression, and UI/UX testing while documenting issues for resolution. Coordinated with developers and team members to verify fixes and ensure application quality.",
+  link: "https://www.a1qa.com/",
+},
+ {
+  position: ".NET Software Engineer Intern",
+  company: "Jureli Tech",
+  period: "Jul 2025 - Present",
+  description:
+    "Contributing to the development and maintenance of web applications using ASP.NET MVC and C#. Working with MS SQL Server databases to manage and optimize data operations. Collaborating with team members to implement secure authentication and role-based access controls, ensuring smooth functionality and security across modules.",
+  link: "https://www.jureli.com/",
+},
+  
 ]
 
 export default function ExperiencePage() {
