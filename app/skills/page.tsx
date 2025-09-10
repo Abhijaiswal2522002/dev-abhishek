@@ -1,95 +1,66 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Badge } from "@/components/ui/badge"
-import {
-  SiJavascript,
-  SiPython,
-  SiCplusplus,
-  SiTypescript,
-  SiC,
-  SiReact,
-  SiNextdotjs,
-  SiTailwindcss,
-  SiHtml5,
-  SiCss3,
-  SiStyledcomponents,
-  SiNodedotjs,
-  SiExpress,
-  SiDjango,
-  SiMongodb,
-  SiPostgresql,
-  SiSocketdotio,
-  SiApollographql,
-  SiGit,
-  SiGithub,
-  SiPostman,
-  SiFigma,
-  SiVercel,
-  SiJsonwebtokens,
-  SiRedux,
-  SiStripe,
-  SiOpenai,
-  SiNodemon,
-  SiPuppeteer,
-  // Add the missing icons here 
-  SiCsharp,
-  SiDotnet,
-} from "react-icons/si"
+import { motion } from "framer-motion";
+import { Badge } from "@/components/ui/badge";
 import {
   Code,
   Layout,
   Server,
   Wrench,
-  Brain
-} from "lucide-react"
+  Brain,
+  Database,
+  GitBranch,
+  Github,
+  Boxes,
+  TestTube,
+} from "lucide-react";
 
 const skillCategories = [
   {
     name: "Languages",
     icon: Code,
     skills: [
-      { name: "JavaScript", icon: SiJavascript },
-      { name: "Python", icon: SiPython },
-      { name: "C++", icon: SiCplusplus },
-      { name: "TypeScript", icon: SiTypescript },
-      { name: "C", icon: SiC },
-      { name: "C#", icon: SiCsharp }, // Now this icon will be correctly imported
+      { name: "JavaScript", icon: Code },
+      { name: "Python", icon: Code },
+      { name: "C++", icon: Code },
+      { name: "TypeScript", icon: Code },
+      { name: "C", icon: Code },
+      { name: "C#", icon: Code },
     ],
   },
   {
     name: "Frontend",
     icon: Layout,
     skills: [
-      { name: "React.js", icon: SiReact },
-      { name: "Next.js", icon: SiNextdotjs },
-      { name: "Tailwind CSS", icon: SiTailwindcss },
-      { name: "HTML", icon: SiHtml5 },
-      { name: "CSS", icon: SiCss3 },
-      { name: "Styled Components", icon: SiStyledcomponents },
+      { name: "React.js", icon: Layout },
+      { name: "Next.js", icon: Layout },
+      { name: "Tailwind CSS", icon: Layout },
+      { name: "HTML", icon: Layout },
+      { name: "CSS", icon: Layout },
+      { name: "Styled Components", icon: Layout },
     ],
   },
   {
     name: "Backend",
     icon: Server,
     skills: [
-      { name: ".NET Core", icon: SiDotnet }, // Now this icon will be correctly imported
-      { name: "ASP.NET MVC", icon: SiDotnet }, // Now this icon will be correctly imported
-      { name: "C# APIs", icon: SiCsharp }, // Now this icon will be correctly imported
-      { name: "Node.js", icon: SiNodedotjs },
-      { name: "Express.js", icon: SiExpress },
-      { name: "Django", icon: SiDjango },
-      { name: "MongoDB", icon: SiMongodb },
-      { name: "PostgreSQL", icon: SiPostgresql },
+      { name: ".NET Core", icon: Server },
+      { name: "ASP.NET MVC", icon: Server },
+      { name: "C# APIs", icon: Server },
+      { name: "Node.js", icon: Server },
+      { name: "Express.js", icon: Server },
+      { name: "Django", icon: Server },
+      { name: "MongoDB", icon: Database },
+      { name: "PostgreSQL", icon: Database },
     ],
   },
   {
     name: "QA & Cybersecurity",
     icon: Brain,
     skills: [
-      { name: "Manual Testing", icon: Wrench },
-      { name: "Functional Testing", icon: Wrench },
-      { name: "Regression Testing", icon: Wrench },
+      { name: "Manual Testing", icon: TestTube },
+      { name: "Functional Testing", icon: TestTube },
+      { name: "Regression Testing", icon: TestTube },
       { name: "Jira", icon: Wrench },
       { name: "OWASP ZAP", icon: Brain },
       { name: "Linux CLI", icon: Brain },
@@ -99,15 +70,15 @@ const skillCategories = [
     name: "Tools",
     icon: Wrench,
     skills: [
-      { name: "Git", icon: SiGit },
-      { name: "GitHub", icon: SiGithub },
-      { name: "Postman", icon: SiPostman },
-      { name: "Figma", icon: SiFigma },
-      { name: "Nodemon", icon: SiNodemon },
-      { name: "Vercel", icon: SiVercel },
+      { name: "Git", icon: GitBranch },
+      { name: "GitHub", icon: Github },
+      { name: "Postman", icon: Boxes },
+      { name: "Figma", icon: Boxes },
+      { name: "Nodemon", icon: Boxes },
+      { name: "Vercel", icon: Boxes },
     ],
   },
-]
+];
 
 export default function SkillsPage() {
   return (
@@ -152,5 +123,5 @@ export default function SkillsPage() {
         </div>
       </div>
     </main>
-  )
+  );
 }
