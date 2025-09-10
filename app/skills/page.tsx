@@ -32,6 +32,9 @@ import {
   SiOpenai,
   SiNodemon,
   SiPuppeteer,
+  // Add the missing icons here 
+  SiCsharp,
+  SiDotnet,
 } from "react-icons/si"
 import {
   Code,
@@ -51,7 +54,7 @@ const skillCategories = [
       { name: "C++", icon: SiCplusplus },
       { name: "TypeScript", icon: SiTypescript },
       { name: "C", icon: SiC },
-      { name: "C#", icon: SiCsharp },
+      { name: "C#", icon: SiCsharp }, // Now this icon will be correctly imported
     ],
   },
   {
@@ -70,14 +73,13 @@ const skillCategories = [
     name: "Backend",
     icon: Server,
     skills: [
-      { name: ".NET Core", icon: SiDotnet },
-      { name: "ASP.NET MVC", icon: SiDotnet },
-      { name: "C# APIs", icon: SiCsharp },
+      { name: ".NET Core", icon: SiDotnet }, // Now this icon will be correctly imported
+      { name: "ASP.NET MVC", icon: SiDotnet }, // Now this icon will be correctly imported
+      { name: "C# APIs", icon: SiCsharp }, // Now this icon will be correctly imported
       { name: "Node.js", icon: SiNodedotjs },
       { name: "Express.js", icon: SiExpress },
       { name: "Django", icon: SiDjango },
       { name: "MongoDB", icon: SiMongodb },
-      { name: "MS SQL Server", icon: SiMicrosoftsqlserver },
       { name: "PostgreSQL", icon: SiPostgresql },
     ],
   },
@@ -89,8 +91,6 @@ const skillCategories = [
       { name: "Functional Testing", icon: Wrench },
       { name: "Regression Testing", icon: Wrench },
       { name: "Jira", icon: Wrench },
-      { name: "Burp Suite", icon: SiBurpsuite },
-      { name: "Wireshark", icon: SiWireshark },
       { name: "OWASP ZAP", icon: Brain },
       { name: "Linux CLI", icon: Brain },
     ],
