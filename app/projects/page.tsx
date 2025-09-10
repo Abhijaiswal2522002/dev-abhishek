@@ -3,57 +3,67 @@
 import { motion } from "framer-motion"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Github, ExternalLink } from "lucide-react"
+import { ExternalLink, Globe, Database, Code2, Server } from "lucide-react"
 
 const projects = [
-   {
-  name: "MedRoute",
-  description:
-    "A medicine auction and delivery platform that connects buyers and sellers in real-time. Features include live bidding, user authentication, order tracking, and secure payments. Built for better accessibility to essential medicines.",
-  techStack: "Next.js, Node.js, Express, MongoDB, Tailwind CSS, Socket.io, Stripe",
-  github: "https://github.com/Abhijaiswal2522002/MedR",
-  demo: "https://med-r-c9vd.vercel.app/",
-  image: "/medroute.png",
-},
-     {
-      name: "TalentEzee - Influencer Engagement Platform",
-      description:
-        "A comprehensive frontend onboarding module built for TalentEzee.com, designed to manage influencer engagements with a clean, responsive interface using Next.js..",
-      techStack: "Next.js, Redux, Tailwind CSS,PostSql,Ui/Ux",
-      github: "https://github.com/Abhijaiswal2522002/TalentEzee",
-      demo: "https://talent-ezee.vercel.app/",
-      image: "/TalentEzee.png",
-    },{
-      name: "Fitnessx",
-      description:
-        "A personalized fitness tracking web app designed to help users achieve their fitness goals on a budget. Includes workout planning, diet recommendations, BMI tracking, and progress visualization.",
-      techStack: "React.js, Node.js, Express.js, MongoDB, Tailwind CSS",
-      github: "https://github.com/Abhijaiswal2522002/fitnessx",
-      demo: "https://fitfusion-demo.vercel.app",
-      image: "/Fittrack.png", // Put your image in /public/images/
-    },
-    {
-      name: "Dcoder",
-      description:
-        "An AI-driven tech startup focused on building innovative web solutions. Dcoder offers smart, scalable tools and platforms that simplify user decision-making using modern web technologies and AI.",
-      techStack: "Next.js, Node.js, Express.js, MongoDB, OpenAI API, Tailwind CSS",
-      github: "https://github.com/d-coder-s/Portfolio",
-      demo: "https://d-coder-s.netlify.app/home",
-      image: "/dcoder.png",
-    },
-    {
-      name: "AI Summarizer",
-      description:
-        "A web app that uses OpenAI's language models to summarize long articles into short, clear summaries. Clean UI for reading and copying results easily.",
-      techStack: "Next.js, Redux, Tailwind CSS, OpenAI API",
-      github: "https://github.com/Abhijaiswal2522002/Ai-summarizer",
-      demo: "https://67249488cf9357fe0e030a78--ai-summmarizzer.netlify.app/",
-      image: "/ai.png",
-    }
-
-  ]
-  
-
+  {
+    name: "MedRoute",
+    description:
+      "A medicine auction and delivery platform that connects buyers and sellers in real-time. Features include live bidding, user authentication, order tracking, and secure payments.",
+    techStack: "Next.js, Node.js, Express, MongoDB, Tailwind CSS, Socket.io, Stripe",
+    github: "https://github.com/Abhijaiswal2522002/MedR",
+    demo: "https://med-r-c9vd.vercel.app/",
+    image: "/medroute.png",
+    icons: [Code2, Server, Database],
+  },
+  {
+    name: "TalentEzee - Influencer Engagement Platform",
+    description:
+      "A comprehensive frontend onboarding module built for TalentEzee.com, designed to manage influencer engagements with a clean, responsive interface.",
+    techStack: "Next.js, Redux, Tailwind CSS, PostgreSQL, UI/UX",
+    github: "https://github.com/Abhijaiswal2522002/TalentEzee",
+    demo: "https://talent-ezee.vercel.app/",
+    image: "/TalentEzee.png",
+    icons: [Code2, Database, Globe],
+  },
+  {
+    name: "Fitnessx",
+    description:
+      "A personalized fitness tracking web app designed to help users achieve their fitness goals on a budget. Includes workout planning, diet recommendations, BMI tracking, and progress visualization.",
+    techStack: "React.js, Node.js, Express.js, MongoDB, Tailwind CSS",
+    github: "https://github.com/Abhijaiswal2522002/fitnessx",
+    demo: "https://fitfusion-demo.vercel.app",
+    image: "/Fittrack.png",
+    icons: [Code2, Server, Database],
+  },
+  {
+    name: "SchoolOne",
+    description:
+      "A centralized school management web app providing notes, lectures, events, tutor booking, peer mentoring, and real-time announcements for students.",
+    techStack: ".NET, Bootstrap, Python, SQL, Docker, AWS",
+    demo: "https://www.schoolone.app/",
+    image: "/schoolone.png",
+    icons: [Globe, Database, Code2],
+  },
+  {
+    name: "Aarohan Survey",
+    description:
+      "A dynamic survey platform allowing organizations to create, send, and track surveys with analytics and reporting features.",
+    techStack: ".NET, Bootstrap, Python, SQL, Docker, AWS",
+    demo: "https://aarohanaconsulting.com/",
+    image: "/aarohansurvey.png",
+    icons: [Code2, Database, Server],
+  },
+  {
+    name: "Jureli Tech Website",
+    description:
+      "Official website for Jureli Tech, showcasing their educational software, AI/ML products, and automation tools with a modern responsive design.",
+    techStack: ".NET, Bootstrap, Python, SQL, Docker, AWS",
+    demo: "https://www.jureli.com/",
+    image: "/jurelitech.png",
+    icons: [Globe, Code2, Server],
+  },
+]
 
 export default function ProjectsPage() {
   return (
@@ -77,45 +87,49 @@ export default function ProjectsPage() {
               transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
             >
               <Card className="h-full flex flex-col overflow-hidden border border-primary/10 hover:border-primary/30 transition-colors">
-  {/* Gradient border */}
-  <div className="h-2 bg-gradient-to-r from-primary to-secondary" />
-  
-  {/* Project Image */}
-  <img
-    src={project.image}
-    alt={`${project.name} screenshot`}
-    className="w-full h-48 object-cover"
-  />
+                <div className="h-2 bg-gradient-to-r from-primary to-secondary" />
 
-  <CardHeader>
-    <CardTitle>{project.name}</CardTitle>
-    <CardDescription>{project.techStack}</CardDescription>
-  </CardHeader>
-  
-  <CardContent className="flex-grow">
-    <p>{project.description}</p>
-  </CardContent>
-  
-  <CardFooter className="flex gap-2">
-    <Button variant="outline" size="sm" asChild>
-      <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
-        <Github size={16} />
-        GitHub
-      </a>
-    </Button>
-    <Button
-      size="sm"
-      asChild
-      className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity"
-    >
-      <a href={project.demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
-        <ExternalLink size={16} />
-        Live Demo
-      </a>
-    </Button>
-  </CardFooter>
-</Card>
+                <img
+                  src={project.image}
+                  alt={`${project.name} screenshot`}
+                  className="w-full h-48 object-cover"
+                />
 
+                <CardHeader>
+                  <CardTitle>{project.name}</CardTitle>
+                  <CardDescription>{project.techStack}</CardDescription>
+                </CardHeader>
+
+                <CardContent className="flex-grow">
+                  <p>{project.description}</p>
+                  <div className="flex gap-2 mt-2">
+                    {project.icons.map((Icon, i) => (
+                      <Icon key={i} size={16} className="text-primary" />
+                    ))}
+                  </div>
+                </CardContent>
+
+                <CardFooter className="flex gap-2">
+                  {project.github && (
+                    <Button variant="outline" size="sm" asChild>
+                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
+                        <ExternalLink size={16} />
+                        GitHub
+                      </a>
+                    </Button>
+                  )}
+                  <Button
+                    size="sm"
+                    asChild
+                    className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity"
+                  >
+                    <a href={project.demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
+                      <ExternalLink size={16} />
+                      Live Demo
+                    </a>
+                  </Button>
+                </CardFooter>
+              </Card>
             </motion.div>
           ))}
         </div>
