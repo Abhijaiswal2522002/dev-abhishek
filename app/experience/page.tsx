@@ -60,7 +60,7 @@ export default function ExperiencePage() {
         </motion.h1>
 
         <div className="space-y-6">
-          {experiences.map((exp, index) => (
+          {experiences.reverse.map((exp, index) => (
             <motion.div
               key={exp.company}
               initial={{ opacity: 0, y: 20 }}
