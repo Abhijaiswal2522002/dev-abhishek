@@ -60,40 +60,39 @@ export default function ExperiencePage() {
         </motion.h1>
 
         <div className="space-y-6">
-          {experiences.reverse.map((exp, index) => (
-            <motion.div
-              key={exp.company}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
-            >
-              <Card className="border border-primary/10 overflow-hidden">
-                <div className="h-1 bg-gradient-to-r from-primary to-secondary" />
-                <CardHeader className="pb-2">
-                  <div className="flex justify-between items-start flex-wrap gap-2">
-                    <CardTitle className="text-xl">
-                      {exp.position} @ {exp.company}
-                    </CardTitle>
-                    <span className="text-sm text-muted-foreground">{exp.period}</span>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="mb-2">{exp.description}</p>
-                  {exp.link && (
-                    <a
-                      href={exp.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block text-sm text-primary hover:underline transition"
-                    >
-                      Visit Website →
-                    </a>
-                  )}
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+         {[...experiences].reverse().map((exp, index) => (
+  <motion.div
+    key={exp.company}
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
+  >
+    <Card className="border border-primary/10 overflow-hidden">
+      <div className="h-1 bg-gradient-to-r from-primary to-secondary" />
+      <CardHeader className="pb-2">
+        <div className="flex justify-between items-start flex-wrap gap-2">
+          <CardTitle className="text-xl">
+            {exp.position} @ {exp.company}
+          </CardTitle>
+          <span className="text-sm text-muted-foreground">{exp.period}</span>
         </div>
+      </CardHeader>
+      <CardContent>
+        <p className="mb-2">{exp.description}</p>
+        {exp.link && (
+          <a
+            href={exp.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block text-sm text-primary hover:underline transition"
+          >
+            Visit Website →
+          </a>
+        )}
+      </CardContent>
+    </Card>
+  </motion.div>
+))}     </div>
       </div>
     </main>
   )
