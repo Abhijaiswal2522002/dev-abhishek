@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "Abhishek Jaiswal | Full-Stack Developer",
   description:
     "Portfolio of Abhishek Jaiswal, a full-stack developer passionate about turning ideas into reality through scalable and intelligent web solutions.",
-    generator: 'v0.dev'
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({
