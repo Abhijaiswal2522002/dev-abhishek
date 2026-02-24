@@ -7,13 +7,13 @@ import { ExternalLink, Globe, Database, Code2, Server } from "lucide-react"
 
 const projects = [
   {
-    name: "MedRoute",
+    name: "SwasthRoute",
     description:
       "A medicine auction and delivery platform that connects buyers and sellers in real-time. Features include live bidding, user authentication, order tracking, and secure payments.",
     techStack: "Next.js, Node.js, Express, MongoDB, Tailwind CSS, Socket.io, Stripe",
-    github: "https://github.com/Abhijaiswal2522002/MedR",
-    demo: "https://med-r-c9vd.vercel.app/",
-    image: "/medroute.png",
+    github: "https://github.com/Abhijaiswal2522002/swasth-route",
+    demo: "https://swasth-route.vercel.app/",
+    image: "/SwasthRoute.png",
     icons: [Code2, Server, Database],
   },
   {
