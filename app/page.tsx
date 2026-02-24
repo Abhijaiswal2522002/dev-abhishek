@@ -24,12 +24,12 @@ const item = {
 
 const featuredProjects = [
   {
-    name: "MedRoute",
+    name: "SwasthRoute",
     description:
       "A medicine auction and delivery platform that connects buyers and sellers in real-time. Features include live bidding, user authentication, and secure payments.",
     techStack: ["Next.js", "Node.js", "MongoDB", "Socket.io"],
-    github: "https://github.com/Abhijaiswal2522002/MedR",
-    demo: "https://med-r-c9vd.vercel.app/",
+    github: "https://github.com/Abhijaiswal2522002/swasth-route",
+    demo: "https://swasth-route.vercel.app/",
     color: "from-blue-500/20 to-cyan-500/20"
   },
   {
