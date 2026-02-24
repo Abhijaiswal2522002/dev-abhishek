@@ -17,15 +17,14 @@ const projects = [
     icons: [Code2, Server, Database],
   },
   {
-    name: "TalentEzee - Influencer Engagement Platform",
+    name: "Naaulo",
     description:
-      "A comprehensive frontend onboarding module built for TalentEzee.com, designed to manage influencer engagements with a clean, responsive interface.",
-    techStack: "Next.js, Redux, Tailwind CSS, PostgreSQL, UI/UX",
-    github: "https://github.com/Abhijaiswal2522002/TalentEzee",
-    demo: "https://talent-ezee.vercel.app/",
-    image: "/TalentEzee.png",
-    icons: [Code2, Database, Globe],
-  },
+      "A sophisticated omni-channel customer support and real-time communication platform. It centralizes messages from Facebook, WhatsApp, TikTok, and a custom web chat widget into a unified agent dashboard. Key features include real-time message streaming, AI-powered voice chat via WebRTC, and a comprehensive management system for restaurant operations and digital assets.",
+    techStack: "ASP.NET Core, C#, SignalR, Kafka, Redis, SQL Server, WebRTC, Socket.io, Bootstrap",
+    demo: "https://naaulo.com/", 
+    image: "/naaulo.png",
+    icons: [Globe, Database, Code2],
+},
   {
     name: "SchoolOne",
     description:
@@ -53,6 +52,16 @@ const projects = [
     image: "/jurelitech.png",
     icons: [Globe, Code2, Server],
   },
+   {
+    name: "TalentEzee - Influencer Engagement Platform",
+    description:
+      "A comprehensive frontend onboarding module built for TalentEzee.com, designed to manage influencer engagements with a clean, responsive interface.",
+    techStack: "Next.js, Redux, Tailwind CSS, PostgreSQL, UI/UX",
+    github: "https://github.com/Abhijaiswal2522002/TalentEzee",
+    demo: "https://talent-ezee.vercel.app/",
+    image: "/TalentEzee.png",
+    icons: [Code2, Database, Globe],
+  }
 ]
 
 export default function ProjectsPage() {
