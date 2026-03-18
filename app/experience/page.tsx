@@ -33,7 +33,7 @@ const experiences = [
     period: "AUG 2024 - PRESENT",
     description:
       "Founded Dcoder, a tech startup providing AI-driven solutions. Led product development, engaged with clients to align solutions with their needs, oversaw business strategy, and managed technical implementation across full-stack platforms.",
-    link: "https://d-coder-s.netlify.app/home",
+    link: "https://dcoder.online/",
   },
   {
     position: "Software Engineer Intern",
@@ -73,11 +73,11 @@ export default function ExperiencePage() {
                   {exp.period}
                 </div>
               </div>
-              
+
               <p className="text-[#888888] text-sm leading-relaxed mb-4 pb-4 border-b border-[#222222]">
                 {exp.description}
               </p>
-              
+
               {exp.link && (
                 <a
                   href={exp.link}
