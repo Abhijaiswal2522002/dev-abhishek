@@ -41,13 +41,23 @@ const projects = [
     techStack: [".NET", "Bootstrap", "Python", "SQL"],
     demo: "https://www.jureli.com/",
   },
+  {
+    name: "TalentEzee - Influencer Engagement Platform",
+    description:
+      "A comprehensive frontend onboarding module built for TalentEzee.com, designed to manage influencer engagements with a clean, responsive interface.",
+    techStack: "Next.js, Redux, Tailwind CSS, PostgreSQL, UI/UX",
+    github: "https://github.com/Abhijaiswal2522002/TalentEzee",
+    demo: "https://talent-ezee.vercel.app/",
+    image: "/TalentEzee.png",
+    icons: [Code2, Database, Globe],
+  }
 ]
 
 export default function ProjectsPage() {
   return (
     <main className="min-h-screen pt-24 pb-16 px-4 bg-[#0C0C0C] text-[#CCCCCC] font-mono scanlines">
       <div className="max-w-6xl mx-auto">
-        
+
         <header className="mb-12 space-y-2 text-center md:text-left">
           <div className="flex items-center justify-center md:justify-start gap-2 text-secondary">
             <span>$</span>
@@ -72,7 +82,7 @@ function ProjectCard({ name, description, techStack, demo, github }: { name: str
   return (
     <div className="group bg-[#111111] border border-[#333333] p-6 hover:border-primary/50 transition-all duration-300 flex flex-col h-full relative overflow-hidden">
       <div className="absolute top-0 left-0 w-1 h-full bg-primary/20 group-hover:bg-primary transition-colors"></div>
-      
+
       <div className="flex justify-between items-start mb-4">
         <h2 className="text-lg font-bold text-white group-hover:text-primary transition-colors uppercase tracking-tight">{name}</h2>
         <div className="flex gap-3">
