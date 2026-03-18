@@ -1,36 +1,20 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
+import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { ArrowRight, Github, Linkedin, Mail, Twitter, ExternalLink, Code2, Layers, Cpu, Globe, Server, Database } from "lucide-react"
+import { Github, Linkedin, Mail, Twitter, ExternalLink, Terminal } from "lucide-react"
 import Link from "next/link"
-import Image from "next/image"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
-}
-
-const item = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0 }
-}
+const techStack = ["Next.js", "Node.js", "MongoDB", "PostgreSQL", "Socket.io", "Docker"]
 
 const featuredProjects = [
   {
-    name: "MedRoute",
+    name: "SwasthRoute",
     description:
       "A medicine auction and delivery platform that connects buyers and sellers in real-time. Features include live bidding, user authentication, and secure payments.",
     techStack: ["Next.js", "Node.js", "MongoDB", "Socket.io"],
     github: "https://github.com/Abhijaiswal2522002/MedR",
     demo: "https://med-r-c9vd.vercel.app/",
-    color: "from-blue-500/20 to-cyan-500/20"
   },
   {
     name: "TalentEzee",
@@ -39,7 +23,6 @@ const featuredProjects = [
     techStack: ["Next.js", "Redux", "PostgreSQL", "Tailwind"],
     github: "https://github.com/Abhijaiswal2522002/TalentEzee",
     demo: "https://talent-ezee.vercel.app/",
-    color: "from-purple-500/20 to-pink-500/20"
   },
   {
     name: "SchoolOne",
@@ -47,163 +30,230 @@ const featuredProjects = [
       "A centralized school management web app providing notes, lectures, events, tutor booking, and real-time announcements.",
     techStack: [".NET", "Python", "SQL", "Docker"],
     demo: "https://www.schoolone.app/",
-    color: "from-emerald-500/20 to-teal-500/20"
   },
 ]
 
+const skillsData = {
+  frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Redux"],
+  backend: ["Node.js", "Express", "NestJS", "Socket.io"],
+  database: ["MongoDB", "PostgreSQL", "Redis"],
+  devops: ["Docker", "AWS", "CI/CD", "Nginx"]
+}
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background text-foreground overflow-hidden">
+    <main className="min-h-screen bg-[#0C0C0C] text-[#CCCCCC] font-mono pt-20 scanlines">
       {/* Hero Section */}
-      <section className="relative flex flex-col items-center justify-center min-h-[90vh] px-4 pt-20 text-center">
-        <div className="absolute inset-0 -z-10 overflow-hidden">
-          <div className="absolute top-[20%] left-[20%] w-72 h-72 bg-primary/20 rounded-full blur-[100px] opacity-50 animate-blob" />
-          <div className="absolute top-[30%] right-[20%] w-72 h-72 bg-secondary/20 rounded-full blur-[100px] opacity-50 animate-blob animation-delay-2000" />
+      <section className="max-w-7xl mx-auto px-4 py-20 flex flex-col items-start min-h-[70vh] justify-center">
+        <div className="w-full space-y-4 mb-8">
+          <div className="flex items-center gap-2">
+            <span className="text-secondary">$</span>
+            <span className="text-white">whoami</span>
+          </div>
+          <div className="text-[#888888] animate-in fade-in duration-1000">
+            Abhishek Jaiswal — Full Stack Developer
+          </div>
         </div>
 
-        <motion.div
-          variants={container}
-          initial="hidden"
-          animate="show"
-          className="max-w-4xl mx-auto space-y-8"
-        >
-          <motion.div variants={item} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 text-secondary border border-secondary/20 text-sm font-medium">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
-            </span>
-            Available for new projects
+        <div className="space-y-4 max-w-4xl">
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight text-white">
+            <Typewriter text="Building the " delay={0} />
+            <span className="text-secondary"><Typewriter text="future" delay={1200} /></span>
+            <Typewriter text=" of web." delay={1700} />
+            <span className="inline-block w-3 h-10 md:h-14 bg-primary ml-2 animate-cursor align-middle"></span>
+          </h1>
+        </div>
+        <br />
+        <div className="space-y-6 max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 1 }}
+            className="text-primary text-lg md:text-xl"
+          >
+            {`// Pixel-perfect design · Scalable architecture`}
           </motion.div>
 
-          <motion.h1 variants={item} className="text-6xl md:text-8xl font-bold tracking-tight leading-none bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/50">
-            Crafting <span className="text-primary">Digital</span> <br /> Experiences
-          </motion.h1>
-
-          <motion.p variants={item} className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            I'm <span className="text-foreground font-semibold">Abhishek Jaiswal</span>. A full-stack developer obsessed with pixel-perfect design and scalable architecture. I build things for the web that look good and work even better.
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1.5 }}
+            className="text-[#888888] text-lg max-w-2xl leading-relaxed"
+          >
+            I build things for the web that look good and work even better. Specializing in high-performance applications and seamless user experiences.
           </motion.p>
 
-          <motion.div variants={item} className="flex flex-wrap items-center justify-center gap-4">
-            <a href="/Abhishek Resume.pdf" download>
-              <Button size="lg" className="h-12 px-8 text-lg rounded-full shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all">
-                Resume
-              </Button>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 2 }}
+            className="flex flex-wrap gap-4 pt-4"
+          >
+            <a
+              href="/resume.pdf"
+              className="bg-secondary text-[#0C0C0C] px-6 py-3 font-bold hover:brightness-110 transition-all active:scale-95"
+            >
+              ./resume.pdf
             </a>
-            <Link href="/contact">
-              <Button size="lg" variant="outline" className="h-12 px-8 text-lg rounded-full border-2 hover:bg-secondary/10 hover:text-secondary hover:border-secondary/50 transition-all">
-                Contact Me
-              </Button>
+            <Link
+              href="/contact"
+              className="border border-primary text-primary px-6 py-3 font-bold hover:bg-primary/10 transition-all active:scale-95"
+            >
+              contact --me
             </Link>
           </motion.div>
 
-          <motion.div variants={item} className="flex items-center justify-center gap-6 pt-8 text-muted-foreground">
-            <Link href="https://github.com/Abhijaiswal2522002" target="_blank" className="hover:text-foreground transition-colors hover:scale-110 transform duration-200">
-              <Github size={24} />
-            </Link>
-            <Link href="https://linkedin.com/in/abhijaiswal2522002" target="_blank" className="hover:text-foreground transition-colors hover:scale-110 transform duration-200">
-              <Linkedin size={24} />
-            </Link>
-            <Link href="mailto:jaiswalabhishek2522002@gmail.com" className="hover:text-foreground transition-colors hover:scale-110 transform duration-200">
-              <Mail size={24} />
-            </Link>
-            <Link href="https://twitter.com" target="_blank" className="hover:text-foreground transition-colors hover:scale-110 transform duration-200">
-              <Twitter size={24} />
-            </Link>
-          </motion.div>
-        </motion.div>
-      </section>
-
-      {/* Featured Work Preview */}
-      <section className="py-24 px-4 bg-secondary/5">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Work</h2>
-              <p className="text-muted-foreground max-w-md">Some of the projects that showcase my passion for different technologies.</p>
-            </div>
-            <Link href="/projects" className="group flex items-center gap-2 text-primary font-medium hover:underline underline-offset-4">
-              View all projects <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {featuredProjects.map((project, index) => (
-              <ProjectCard key={index} {...project} />
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 2.5 }}
+            className="flex flex-wrap gap-3 pt-8"
+          >
+            {techStack.map(tech => (
+              <span key={tech} className="px-3 py-1 border border-primary/30 text-primary text-[10px] tracking-[0.2em] uppercase hover:bg-primary/5 transition-colors cursor-default">
+                {tech}
+              </span>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Skills / What I do */}
-      <section className="py-24 px-4">
-        <div className="max-w-4xl mx-auto text-center space-y-12">
-          <h2 className="text-3xl md:text-4xl font-bold">What I Bring to the Table</h2>
-          <div className="grid md:grid-cols-3 gap-8 text-left">
-            <SkillCard
-              icon={<Code2 size={32} className="text-primary" />}
-              title="Frontend Excellence"
-              desc="Creating beautiful, responsive interfaces with React, Next.js, and modern CSS frameworks like Tailwind."
-            />
-            <SkillCard
-              icon={<Cpu size={32} className="text-secondary" />}
-              title="Backend Robustness"
-              desc="Building scalable APIs and server-side logic with Node.js, Express, and efficient database management."
-            />
-            <SkillCard
-              icon={<Layers size={32} className="text-accent-foreground" />}
-              title="Full-Stack Integration"
-              desc="Seamlessly connecting client and server to deliver complete, production-ready web applications."
-            />
-          </div>
+      {/* Projects Section */}
+      <section className="max-w-7xl mx-auto px-4 py-24 border-t border-[#333333]">
+        <div className="flex items-center gap-2 mb-12">
+          <span className="text-secondary">$</span>
+          <h2 className="text-2xl font-bold text-white tracking-widest uppercase">ls ./projects --featured</h2>
         </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {featuredProjects.map((project, index) => (
+            <ProjectCard key={index} {...project} />
+          ))}
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section className="max-w-7xl mx-auto px-4 py-24 border-t border-[#333333]">
+        <div className="flex items-center gap-2 mb-12">
+          <span className="text-secondary">$</span>
+          <h2 className="text-2xl font-bold text-white tracking-widest uppercase">cat skills.json</h2>
+        </div>
+
+        <div className="bg-[#1E1E1E] p-8 rounded-sm border border-[#333333] font-mono text-sm overflow-x-auto shadow-2xl relative">
+          <div className="absolute top-2 right-4 text-[#333333] hidden md:block select-none">JSON</div>
+          <pre className="text-white">
+            <code>
+              <span className="text-[#888888]">{"{"}</span><br />
+              {Object.entries(skillsData).map(([category, skills], i, arr) => (
+                <div key={category} className="pl-6 group/line hover:bg-white/5 transition-colors">
+                  <span className="text-primary">"{category}"</span>: <span className="text-[#888888]">[</span><br />
+                  <div className="pl-6">
+                    {skills.map((skill, si) => (
+                      <span key={skill} className="inline-block hover:text-white transition-colors">
+                        <span className="text-secondary">"{skill}"</span>
+                        {si < skills.length - 1 && <span className="text-[#888888]">, </span>}
+                      </span>
+                    ))}
+                  </div>
+                  <span className="text-[#888888]">]</span>{i < arr.length - 1 && <span className="text-[#888888]">,</span>}<br />
+                </div>
+              ))}
+              <span className="text-[#888888]">{"}"}</span>
+            </code>
+          </pre>
+        </div>
+      </section>
+
+      {/* Experience Preview */}
+      <section className="max-w-7xl mx-auto px-4 py-24 border-t border-[#333333]">
+        <div className="flex items-center gap-2 mb-12">
+          <span className="text-secondary">$</span>
+          <h2 className="text-2xl font-bold text-white tracking-widest uppercase">./experience --latest</h2>
+        </div>
+        <div className="border border-[#333333] p-6 bg-[#111111]">
+          <div className="flex flex-col md:flex-row justify-between gap-4">
+            <div>
+              <div className="text-primary font-bold">.NET Software Engineer </div>
+              <div className="text-white text-xl">Jureli Tech</div>
+            </div>
+            <div className="text-secondary font-bold self-start bg-secondary/10 px-3 py-1 border border-secondary/20">
+              JUL 2025 – PRESENT
+            </div>
+          </div>
+          <p className="mt-4 text-[#888888] max-w-3xl">
+            Developing robust ASP.NET MVC modules and managing SQL Server databases. Implementing secure JWT authentication and collaborating directly with clients.
+          </p>
+        </div>
+      </section>
+
+      {/* Social Links Placeholder (Minimal) */}
+      <section className="max-w-7xl mx-auto px-4 py-12 flex justify-center gap-8 text-[#888888] border-t border-[#333333]">
+        <Link href="https://github.com/Abhijaiswal2522002" target="_blank" className="hover:text-primary transition-colors hover:scale-110 transition-transform">
+          <Github size={20} />
+        </Link>
+        <Link href="https://linkedin.com/in/abhijaiswal2522002" target="_blank" className="hover:text-primary transition-colors hover:scale-110 transition-transform">
+          <Linkedin size={20} />
+        </Link>
+        <Link href="mailto:jaiswalabhishek2522002@gmail.com" className="hover:text-primary transition-colors hover:scale-110 transition-transform">
+          <Mail size={20} />
+        </Link>
+        <Link href="https://twitter.com" target="_blank" className="hover:text-primary transition-colors hover:scale-110 transition-transform">
+          <Twitter size={20} />
+        </Link>
       </section>
     </main>
   )
 }
 
-function ProjectCard({ name, description, techStack, color, demo, github }: { name: string, description: string, techStack: string[], color: string, demo: string, github?: string }) {
-  return (
-    <div className="group relative rounded-2xl overflow-hidden border bg-background hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 flex flex-col h-full">
-      <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-      <div className="relative p-6 h-full flex flex-col">
-        <div className="flex justify-between items-start mb-4">
-          <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">{name}</h3>
-          <div className="flex gap-2">
-            {github && (
-              <a href={github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-                <Github size={20} />
-              </a>
-            )}
-            <a href={demo} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-              <ExternalLink size={20} />
-            </a>
-          </div>
-        </div>
+function Typewriter({ text, delay = 0 }: { text: string, delay?: number }) {
+  const [displayText, setDisplayText] = useState("")
 
-        <p className="text-muted-foreground mb-6 flex-grow text-sm leading-relaxed">{description}</p>
+  useEffect(() => {
+    let timeout: NodeJS.Timeout
+    const startTimeout = setTimeout(() => {
+      let i = 0
+      const interval = setInterval(() => {
+        setDisplayText(text.slice(0, i + 1))
+        i++
+        if (i >= text.length) clearInterval(interval)
+      }, 50)
+      return () => clearInterval(interval)
+    }, delay)
 
-        <div className="flex flex-wrap gap-2 mt-auto">
-          {techStack.map((t) => (
-            <span key={t} className="px-2 py-1 bg-secondary/10 text-secondary text-xs rounded-md font-medium border border-secondary/20">
-              {t}
-            </span>
-          ))}
-        </div>
-      </div>
-    </div>
-  )
+    return () => clearTimeout(startTimeout)
+  }, [text, delay])
+
+  return <>{displayText}</>
 }
 
-function SkillCard({ icon, title, desc }: { icon: React.ReactNode, title: string, desc: string }) {
+function ProjectCard({ name, description, techStack, demo, github }: { name: string, description: string, techStack: string[], demo: string, github?: string }) {
   return (
-    <div className="group p-6 rounded-2xl bg-card border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5">
-      <div className="mb-4 p-3 bg-secondary/10 w-fit rounded-xl group-hover:scale-110 transition-transform duration-300">
-        {icon}
+    <div className="group bg-[#1E1E1E] border-l-4 border-l-primary border-t border-r border-b border-[#333333] p-6 hover:-translate-y-1 transition-all duration-300 hover:shadow-[0_0_30px_rgba(78,201,176,0.15)] relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-16 h-16 bg-primary/5 -rotate-45 translate-x-8 -translate-y-8 group-hover:bg-primary/10 transition-colors"></div>
+
+      <div className="flex justify-between items-start mb-4 relative z-10">
+        <h3 className="text-xl font-bold text-white group-hover:text-primary transition-colors uppercase tracking-tight">{name}</h3>
+        <div className="flex gap-3">
+          {github && (
+            <a href={github} target="_blank" rel="noopener noreferrer" className="text-[#888888] hover:text-white transition-colors active:scale-90">
+              <Github size={18} />
+            </a>
+          )}
+          <a href={demo} target="_blank" rel="noopener noreferrer" className="text-[#888888] hover:text-white transition-colors active:scale-90">
+            <ExternalLink size={18} />
+          </a>
+        </div>
       </div>
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p className="text-muted-foreground leading-relaxed text-sm">
-        {desc}
-      </p>
+
+      <p className="text-[#888888] text-sm leading-relaxed mb-6 group-hover:text-[#AAAAAA] transition-colors">{description}</p>
+
+      <div className="flex flex-wrap gap-2">
+        {techStack.map(t => (
+          <span key={t} className="text-[10px] text-primary/70 font-bold uppercase tracking-widest border border-primary/20 px-2 py-0.5 group-hover:border-primary/40 transition-colors">
+            {t}
+          </span>
+        ))}
+      </div>
     </div>
   )
 }

@@ -1,169 +1,150 @@
 "use client"
 
 import { motion } from "framer-motion"
-import Image from "next/image"
-import { Calendar, Briefcase, GraduationCap, Code2, ShieldCheck } from "lucide-react"
-import { Badge } from "@/components/ui/badge"
-
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
-}
-
-const item = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0 }
-}
+import { Briefcase, GraduationCap, Code2, Terminal, ChevronRight } from "lucide-react"
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen pt-24 pb-16 px-4 bg-background overflow-hidden">
-      <div className="max-w-4xl mx-auto space-y-20">
+    <main className="min-h-screen pt-24 pb-16 px-4 bg-[#0C0C0C] text-[#CCCCCC] font-mono scanlines">
+      <div className="max-w-4xl mx-auto space-y-16">
 
         {/* Header Section */}
-        <motion.div
-          variants={container}
-          initial="hidden"
-          animate="show"
-          className="text-center space-y-6"
-        >
-          <motion.div variants={item} className="relative w-40 h-40 mx-auto mb-8">
-            <div className="absolute inset-0 bg-gradient-to-tr from-primary to-secondary rounded-full blur-2xl opacity-50 contrast-125 animate-pulse" />
-            <div className="relative w-full h-full rounded-full overflow-hidden ring-4 ring-background shadow-2xl">
-              <Image
-                src="/pp.jpg"
-                alt="Abhishek Jaiswal"
-                fill
-                className="object-cover"
-                priority
-              />
+        <section className="space-y-4">
+          <div className="flex items-center gap-2 text-secondary">
+            <span>$</span>
+            <span className="text-white">cat about.txt</span>
+          </div>
+          
+          <div className="flex flex-col md:flex-row gap-8 items-start">
+            {/* ASCII Initials Block */}
+            <div className="bg-[#1E1E1E] p-4 border border-[#333333] text-primary text-[10px] leading-tight select-none">
+              <pre>
+{`  ___  ______ 
+ / _ \\ | ___ \\
+/ /_\\ \\| |_/ /
+|  _  || ___ \\
+| | | || |_/ /
+\\_| |_/\\____/ `}
+              </pre>
             </div>
-          </motion.div>
 
-          <motion.h1 variants={item} className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/50">
-            More Than Just Code
-          </motion.h1>
-          <motion.p variants={item} className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            I’m <span className="text-foreground font-semibold">Abhishek Jaiswal</span>. A full-stack engineer who bridges the gap between complex backends and beautiful frontends. I believe in software that solves real problems, securely and scalably.
-          </motion.p>
-        </motion.div>
+            <div className="space-y-4">
+              <h1 className="text-3xl md:text-4xl font-bold text-white uppercase tracking-tighter">
+                Abhishek Jaiswal
+              </h1>
+              <div className="text-primary">
+                {`> Full Stack Engineer // Security Enthusiast`}
+              </div>
+              <p className="text-[#888888] leading-relaxed max-w-xl">
+                Bridging the gap between complex backends and high-performance frontends. 
+                I build software that solves real problems, with a focus on scalability and security.
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* Narrative / Bio */}
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-12 items-center bg-secondary/5 rounded-3xl p-8 border border-secondary/10"
-        >
-          <div className="space-y-6">
-            <div className="flex items-center gap-3 text-primary font-medium mb-2">
-              <Code2 size={24} />
-              <span>The Developer</span>
-            </div>
-            <h3 className="text-2xl font-semibold">Building the Future, One Line at a Time</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              My journey started with lines of C# and evolved into architecting full-scale applications. From building enterprise .NET systems to crafting dynamic Next.js interfaces, I love the entire stack.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              I don't just write code; I care about <strong>security</strong>. My background in QA and cybersecurity (Burp Suite, Wireshark) means I build apps that aren't just pretty—they're bulletproof.
-            </p>
+        <section className="border border-[#333333] bg-[#111111] p-8 space-y-6 relative overflow-hidden">
+          <div className="absolute top-0 right-0 p-2 text-[#222222] uppercase text-[10px]">biography.md</div>
+          <div className="flex items-center gap-3 text-primary font-bold uppercase tracking-widest text-sm">
+            <Code2 size={18} />
+            <span>Development Philosophy</span>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <StatCard number="3+" label="Years Coding" />
-            <StatCard number="10+" label="Projects Built" />
-            <StatCard number="100%" label="Client Satisfaction" />
-            <StatCard number="∞" label="Caffeine Consumed" />
+          <p className="text-[#888888] leading-relaxed">
+            My journey started with lines of C# and evolved into architecting full-scale applications. 
+            From building enterprise .NET systems to crafting dynamic Next.js interfaces, I love the entire stack.
+          </p>
+          <p className="text-[#888888] leading-relaxed">
+            I don't just write code; I care about <strong className="text-white">security</strong>. My background in QA and cybersecurity 
+            (Burp Suite, Wireshark) means I build apps that aren't just pretty—they're bulletproof.
+          </p>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 pt-8 border-t border-[#222222]">
+            <StatCard label="YEARS_EXP" value="3+" />
+            <StatCard label="PROJECTS" value="10+" />
+            <StatCard label="SATISFACTION" value="100%" />
+            <StatCard label="CAFFEINE" value="∞" />
           </div>
-        </motion.section>
+        </section>
 
         {/* Experience Timeline */}
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="space-y-10"
-        >
-          <div className="flex items-center gap-3 justify-center mb-8">
-            <div className="h-px bg-border flex-1 max-w-[100px]" />
-            <h2 className="text-2xl font-bold flex items-center gap-2"><Briefcase className="text-primary" /> Professional Journey</h2>
-            <div className="h-px bg-border flex-1 max-w-[100px]" />
+        <section className="space-y-8">
+          <div className="flex items-center gap-2 text-secondary">
+            <span>$</span>
+            <span className="text-white">ls ./experience</span>
           </div>
 
-          <div className="relative border-l-2 border-primary/20 ml-6 md:ml-12 space-y-12 pb-4">
+          <div className="space-y-8 pl-4 border-l border-[#333333]">
             <TimelineItem
               role=".NET Software Engineer Intern"
               company="Jureli Tech"
-              date="Jul 2025 – Present"
+              date="2025 – PRESENT"
               desc="Developing robust ASP.NET MVC modules and managing SQL Server databases. Implementing secure JWT authentication and collaborating directly with clients."
               current
             />
             <TimelineItem
               role="QA Functional Testing Intern"
               company="A1QA"
-              date="Jun 2025 – Jul 2025"
+              date="2025 – 2025"
               desc="Ensuring software quality through rigorous manual and automated testing. Documented critical defects and improved application stability."
             />
             <TimelineItem
               role="Full Stack Developer"
               company="InternBix"
-              date="Nov 2024 – Jun 2025"
+              date="2024 – 2025"
               desc="Built scalable full-stack features using React.js, Node.js, and MongoDB. Delivered secure solutions within tight deadlines."
             />
           </div>
-        </motion.section>
+        </section>
 
         {/* Education */}
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="bg-card border rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 hover:shadow-lg transition-all"
-        >
-          <div className="flex items-center gap-4">
-            <div className="p-4 bg-primary/10 rounded-full text-primary">
-              <GraduationCap size={32} />
+        <section className="space-y-4">
+           <div className="flex items-center gap-2 text-secondary">
+            <span>$</span>
+            <span className="text-white">cat education.txt</span>
+          </div>
+          <div className="bg-[#1E1E1E] border border-[#333333] p-6 flex flex-col md:flex-row items-start justify-between gap-4">
+            <div className="flex items-start gap-4">
+              <div className="p-2 border border-primary/20 text-primary">
+                <GraduationCap size={24} />
+              </div>
+              <div>
+                <h3 className="text-white font-bold uppercase tracking-tight">B.Tech in Information Technology</h3>
+                <p className="text-[#888888] text-sm italic">Ajay Kumar Garg Engineering College</p>
+              </div>
             </div>
-            <div>
-              <h3 className="text-lg font-bold">B.Tech in Information Technology</h3>
-              <p className="text-muted-foreground">Ajay Kumar Garg Engineering College</p>
+            <div className="text-secondary font-bold text-sm bg-secondary/5 px-3 py-1 border border-secondary/10">
+              2021 - 2025
             </div>
           </div>
-          <div className="text-right">
-            <Badge variant="outline" className="text-base px-4 py-1">2021 - 2025</Badge>
-          </div>
-        </motion.section>
+        </section>
 
       </div>
     </main>
   )
 }
 
-function StatCard({ number, label }: { number: string, label: string }) {
+function StatCard({ label, value }: { label: string, value: string }) {
   return (
-    <div className="p-6 bg-background border rounded-xl text-center hover:border-primary/50 transition-colors">
-      <div className="text-3xl font-bold text-primary mb-1">{number}</div>
-      <div className="text-sm text-muted-foreground">{label}</div>
+    <div className="space-y-1">
+      <div className="text-[10px] text-[#555555] font-bold uppercase tracking-widest">{label}</div>
+      <div className="text-xl font-bold text-white">{value}</div>
     </div>
   )
 }
 
 function TimelineItem({ role, company, date, desc, current }: { role: string, company: string, date: string, desc: string, current?: boolean }) {
   return (
-    <div className="relative pl-8 md:pl-12">
-      <span className={`absolute -left-[9px] top-1 h-4 w-4 rounded-full border-2 ${current ? 'bg-background border-primary ring-4 ring-primary/20' : 'bg-muted border-muted-foreground'}`} />
-
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-        <h3 className="text-xl font-bold">{role}</h3>
-        <span className="text-sm font-medium text-muted-foreground bg-secondary/10 px-3 py-1 rounded-full w-fit mt-1 sm:mt-0">{date}</span>
+    <div className="relative pl-6 group">
+      <div className={`absolute -left-[5px] top-1.5 w-2 h-2 rounded-full ${current ? 'bg-primary' : 'bg-[#333333]'}`} />
+      
+      <div className="mb-1 flex flex-wrap items-center gap-x-3 gap-y-1">
+        <span className="text-white font-bold uppercase tracking-tight">{role}</span>
+        <span className="text-secondary text-[10px] bg-secondary/10 px-2 py-0.5 border border-secondary/20">{date}</span>
       </div>
-
-      <div className="text-lg font-semibold text-primary mb-2">{company}</div>
-      <p className="text-muted-foreground leading-relaxed max-w-2xl">
+      
+      <div className="text-primary text-sm font-bold mb-3 uppercase tracking-wider">{company}</div>
+      <p className="text-[#888888] text-sm leading-relaxed max-w-2xl border-l border-[#222222] pl-4 py-1">
         {desc}
       </p>
     </div>

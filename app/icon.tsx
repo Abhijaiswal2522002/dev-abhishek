@@ -14,19 +14,19 @@ export default function Icon() {
             // ImageResponse JSX element
             <div
                 style={{
-                    fontSize: 16,
-                    background: 'linear-gradient(to bottom right, #8b5cf6, #0ea5e9)',
+                    fontSize: 20,
+                    background: '#0C0C0C',
                     width: '100%',
                     height: '100%',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    color: 'white',
-                    borderRadius: '8px', // Rounded corners for a modern look
-                    fontWeight: 700,
+                    color: '#4EC9B0',
+                    border: '1px solid #333333',
+                    fontFamily: 'monospace',
                 }}
             >
-                AJ
+                {">_"}
             </div>
         ),
         // ImageResponse options

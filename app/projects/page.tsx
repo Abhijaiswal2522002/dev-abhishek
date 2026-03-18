@@ -1,129 +1,103 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { ExternalLink, Globe, Database, Code2, Server } from "lucide-react"
+import { ExternalLink, Github, Terminal, Code2, Database, Globe } from "lucide-react"
 
 const projects = [
   {
-    name: "MedRoute",
+    name: "SwasthRoute",
     description:
-      "A medicine auction and delivery platform that connects buyers and sellers in real-time. Features include live bidding, user authentication, order tracking, and secure payments.",
-    techStack: "Next.js, Node.js, Express, MongoDB, Tailwind CSS, Socket.io, Stripe",
+      "A medicine auction and delivery platform that connects buyers and sellers in real-time. Features include live bidding, user authentication, and secure payments.",
+    techStack: ["Next.js", "Node.js", "MongoDB", "Socket.io"],
     github: "https://github.com/Abhijaiswal2522002/MedR",
     demo: "https://med-r-c9vd.vercel.app/",
-    image: "/medroute.png",
-    icons: [Code2, Server, Database],
   },
   {
-    name: "TalentEzee - Influencer Engagement Platform",
+    name: "TalentEzee",
     description:
-      "A comprehensive frontend onboarding module built for TalentEzee.com, designed to manage influencer engagements with a clean, responsive interface.",
-    techStack: "Next.js, Redux, Tailwind CSS, PostgreSQL, UI/UX",
+      "A comprehensive frontend onboarding module designed to manage influencer engagements with a clean, responsive interface.",
+    techStack: ["Next.js", "Redux", "PostgreSQL", "Tailwind"],
     github: "https://github.com/Abhijaiswal2522002/TalentEzee",
     demo: "https://talent-ezee.vercel.app/",
-    image: "/TalentEzee.png",
-    icons: [Code2, Database, Globe],
   },
   {
     name: "SchoolOne",
     description:
-      "A centralized school management web app providing notes, lectures, events, tutor booking, peer mentoring, and real-time announcements for students.",
-    techStack: ".NET, Bootstrap, Python, SQL, Docker, AWS",
+      "A centralized school management web app providing notes, lectures, events, tutor booking, and real-time announcements.",
+    techStack: [".NET", "Python", "SQL", "Docker"],
     demo: "https://www.schoolone.app/",
-    image: "/schoolone.png",
-    icons: [Globe, Database, Code2],
   },
   {
     name: "Aarohan Survey",
     description:
       "A dynamic survey platform allowing organizations to create, send, and track surveys with analytics and reporting features.",
-    techStack: ".NET, Bootstrap, Python, SQL, Docker, AWS",
+    techStack: [".NET", "SQL", "Docker", "Bootstrap"],
     demo: "https://aarohanaconsulting.com/",
-    image: "/aarohansurvey.png",
-    icons: [Code2, Database, Server],
   },
   {
     name: "Jureli Tech Website",
     description:
-      "Official website for Jureli Tech, showcasing their educational software, AI/ML products, and automation tools with a modern responsive design.",
-    techStack: ".NET, Bootstrap, Python, SQL, Docker, AWS",
+      "Official website for Jureli Tech, showcasing their educational software, AI/ML products, and automation tools.",
+    techStack: [".NET", "Bootstrap", "Python", "SQL"],
     demo: "https://www.jureli.com/",
-    image: "/jurelitech.png",
-    icons: [Globe, Code2, Server],
   },
 ]
 
 export default function ProjectsPage() {
   return (
-    <main className="min-h-screen py-24 px-4 bg-gradient-to-tl from-background to-muted/20">
+    <main className="min-h-screen pt-24 pb-16 px-4 bg-[#0C0C0C] text-[#CCCCCC] font-mono scanlines">
       <div className="max-w-6xl mx-auto">
-        <motion.h1
-          className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          Projects
-        </motion.h1>
+        
+        <header className="mb-12 space-y-2 text-center md:text-left">
+          <div className="flex items-center justify-center md:justify-start gap-2 text-secondary">
+            <span>$</span>
+            <h1 className="text-xl font-bold text-white uppercase tracking-[0.2em]">ls ./projects --all</h1>
+          </div>
+          <div className="text-[#888888] text-sm">
+            {`// Listing all production-ready repositories and deployments`}
+          </div>
+        </header>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
-            <motion.div
-              key={project.name}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
-            >
-              <Card className="h-full flex flex-col overflow-hidden border border-primary/10 hover:border-primary/30 transition-colors">
-                <div className="h-2 bg-gradient-to-r from-primary to-secondary" />
-
-                <img
-                  src={project.image}
-                  alt={`${project.name} screenshot`}
-                  className="w-full h-48 object-cover"
-                />
-
-                <CardHeader>
-                  <CardTitle>{project.name}</CardTitle>
-                  <CardDescription>{project.techStack}</CardDescription>
-                </CardHeader>
-
-                <CardContent className="flex-grow">
-                  <p>{project.description}</p>
-                  <div className="flex gap-2 mt-2">
-                    {project.icons.map((Icon, i) => (
-                      <Icon key={i} size={16} className="text-primary" />
-                    ))}
-                  </div>
-                </CardContent>
-
-                <CardFooter className="flex gap-2">
-                  {project.github && (
-                    <Button variant="outline" size="sm" asChild>
-                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
-                        <ExternalLink size={16} />
-                        GitHub
-                      </a>
-                    </Button>
-                  )}
-                  <Button
-                    size="sm"
-                    asChild
-                    className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity"
-                  >
-                    <a href={project.demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
-                      <ExternalLink size={16} />
-                      Live Demo
-                    </a>
-                  </Button>
-                </CardFooter>
-              </Card>
-            </motion.div>
+            <ProjectCard key={project.name} {...project} />
           ))}
         </div>
       </div>
     </main>
+  )
+}
+
+function ProjectCard({ name, description, techStack, demo, github }: { name: string, description: string, techStack: string[], demo: string, github?: string }) {
+  return (
+    <div className="group bg-[#111111] border border-[#333333] p-6 hover:border-primary/50 transition-all duration-300 flex flex-col h-full relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-1 h-full bg-primary/20 group-hover:bg-primary transition-colors"></div>
+      
+      <div className="flex justify-between items-start mb-4">
+        <h2 className="text-lg font-bold text-white group-hover:text-primary transition-colors uppercase tracking-tight">{name}</h2>
+        <div className="flex gap-3">
+          {github && (
+            <a href={github} target="_blank" rel="noopener noreferrer" className="text-[#555555] hover:text-white transition-colors">
+              <Github size={18} />
+            </a>
+          )}
+          <a href={demo} target="_blank" rel="noopener noreferrer" className="text-[#555555] hover:text-white transition-colors">
+            <ExternalLink size={18} />
+          </a>
+        </div>
+      </div>
+
+      <p className="text-[#888888] text-sm leading-relaxed mb-8 flex-grow">
+        {description}
+      </p>
+
+      <div className="flex flex-wrap gap-2 pt-4 border-t border-[#222222]">
+        {techStack.map(t => (
+          <span key={t} className="text-[10px] text-primary/60 font-medium uppercase tracking-widest">
+            {`#${t}`}
+          </span>
+        ))}
+      </div>
+    </div>
   )
 }

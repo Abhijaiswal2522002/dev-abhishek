@@ -1,127 +1,93 @@
-"use client";
+"use client"
 
-import { motion } from "framer-motion";
-import { Badge } from "@/components/ui/badge";
-import {
-  Code,
-  Layout,
-  Server,
-  Wrench,
-  Brain,
-  Database,
-  GitBranch,
-  Github,
-  Boxes,
-  TestTube,
-} from "lucide-react";
+import { motion } from "framer-motion"
+import { Code2, Terminal, ChevronRight } from "lucide-react"
 
 const skillCategories = [
   {
     name: "Languages",
-    icon: Code,
-    skills: [
-      { name: "JavaScript", icon: Code },
-      { name: "Python", icon: Code },
-      { name: "C++", icon: Code },
-      { name: "TypeScript", icon: Code },
-      { name: "C", icon: Code },
-      { name: "C#", icon: Code },
-    ],
+    skills: ["JavaScript", "Python", "C++", "TypeScript", "C", "C#"],
   },
   {
     name: "Frontend",
-    icon: Layout,
-    skills: [
-      { name: "React.js", icon: Layout },
-      { name: "Next.js", icon: Layout },
-      { name: "Tailwind CSS", icon: Layout },
-      { name: "HTML", icon: Layout },
-      { name: "CSS", icon: Layout },
-      { name: "Styled Components", icon: Layout },
-    ],
+    skills: ["React.js", "Next.js", "Tailwind CSS", "HTML", "CSS", "Redux"],
   },
   {
     name: "Backend",
-    icon: Server,
-    skills: [
-      { name: ".NET Core", icon: Server },
-      { name: "ASP.NET MVC", icon: Server },
-      { name: "C# APIs", icon: Server },
-      { name: "Node.js", icon: Server },
-      { name: "Express.js", icon: Server },
-      { name: "Django", icon: Server },
-      { name: "MongoDB", icon: Database },
-      { name: "PostgreSQL", icon: Database },
-    ],
+    skills: [".NET Core", "ASP.NET MVC", "Node.js", "Express.js", "Django"],
   },
   {
-    name: "QA & Cybersecurity",
-    icon: Brain,
-    skills: [
-      { name: "Manual Testing", icon: TestTube },
-      { name: "Functional Testing", icon: TestTube },
-      { name: "Regression Testing", icon: TestTube },
-      { name: "Jira", icon: Wrench },
-      { name: "OWASP ZAP", icon: Brain },
-      { name: "Linux CLI", icon: Brain },
-    ],
+    name: "Database",
+    skills: ["MongoDB", "PostgreSQL", "SQL Server", "MySQL"],
   },
   {
-    name: "Tools",
-    icon: Wrench,
-    skills: [
-      { name: "Git", icon: GitBranch },
-      { name: "GitHub", icon: Github },
-      { name: "Postman", icon: Boxes },
-      { name: "Figma", icon: Boxes },
-      { name: "Nodemon", icon: Boxes },
-      { name: "Vercel", icon: Boxes },
-    ],
+    name: "Security_QA",
+    skills: ["Manual Testing", "OWASP ZAP", "Burp Suite", "Wireshark", "Jira"],
   },
-];
+  {
+    name: "Cloud_DevOps",
+    skills: ["Git", "GitHub", "Docker", "AWS", "Vercel", "Linux CLI"],
+  },
+]
 
 export default function SkillsPage() {
   return (
-    <main className="min-h-screen py-24 px-4 bg-gradient-to-br from-muted/30 to-background">
-      <div className="max-w-5xl mx-auto">
-        <motion.h1
-          className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          Skills
-        </motion.h1>
+    <main className="min-h-screen pt-24 pb-16 px-4 bg-[#0C0C0C] text-[#CCCCCC] font-mono scanlines">
+      <div className="max-w-4xl mx-auto">
+        
+        <header className="mb-12 space-y-2">
+          <div className="flex items-center gap-2 text-secondary">
+            <span>$</span>
+            <h1 className="text-xl font-bold text-white uppercase tracking-[0.2em]">cat skills.json --verbose</h1>
+          </div>
+          <div className="text-[#888888] text-sm">
+            {`// Loading technology stack matrix... Architecture: x86_64`}
+          </div>
+        </header>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {skillCategories.map((category, index) => (
-            <motion.div
-              key={category.name}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
-              className="mb-6 p-6 rounded-xl bg-white/5 backdrop-blur-md shadow-md border border-white/10"
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <category.icon className="text-primary" size={20} />
-                <h3 className="text-xl font-semibold">{category.name}</h3>
+        <section className="bg-[#111111] border border-[#333333] p-8 relative overflow-hidden group">
+          <div className="absolute top-0 right-0 p-3 text-[#222222] text-[10px] select-none font-bold">READ_ONLY</div>
+          
+          <div className="space-y-1 text-sm md:text-base">
+            <div className="text-[#888888]">{ "{" }</div>
+            
+            {skillCategories.map((category, idx) => (
+              <div key={category.name} className="pl-6 group/item hover:bg-white/5 transition-colors py-1">
+                <span className="text-primary font-bold">"{category.name}"</span>: <span className="text-[#888888] underline decoration-dotted">[</span>
+                <div className="pl-6 flex flex-wrap gap-x-4 gap-y-1">
+                  {category.skills.map((skill, si) => (
+                    <span key={skill} className="group/skill">
+                      <span className="text-secondary font-medium hover:text-white transition-colors cursor-crosshair">
+                        "{skill}"
+                      </span>
+                      {si < category.skills.length - 1 && <span className="text-[#888888]">,</span>}
+                    </span>
+                  ))}
+                </div>
+                <span className="text-[#888888] pl-0">]</span>
+                {idx < skillCategories.length - 1 && <span className="text-[#888888]">,</span>}
               </div>
-              <div className="flex flex-wrap gap-3">
-                {category.skills.map(({ name, icon: Icon }) => (
-                  <Badge
-                    key={name}
-                    variant="secondary"
-                    className="text-sm py-1 px-3 flex items-center gap-2 bg-gradient-to-r from-primary/10 to-secondary/10 hover:from-primary/20 hover:to-secondary/20 hover:scale-105 transition-all duration-300"
-                  >
-                    <Icon className="text-primary" size={16} />
-                    {name}
-                  </Badge>
-                ))}
-              </div>
-            </motion.div>
-          ))}
-        </div>
+            ))}
+
+            <div className="text-[#888888]">{ "}" }</div>
+          </div>
+        </section>
+
+        <footer className="mt-12 p-6 border-t border-[#222222] grid grid-cols-1 md:grid-cols-3 gap-8">
+          <SkillStat label="CORE_ENGINE" value="C# / .NET" />
+          <SkillStat label="UI_RUNTIME" value="Next.js / React" />
+          <SkillStat label="DB_LAYER" value="SQL / NoSQL" />
+        </footer>
       </div>
     </main>
-  );
+  )
+}
+
+function SkillStat({ label, value }: { label: string, value: string }) {
+  return (
+    <div className="space-y-1 text-center md:text-left">
+      <div className="text-[10px] text-[#555555] font-bold uppercase tracking-widest">{label}</div>
+      <div className="text-white text-sm font-bold">{value}</div>
+    </div>
+  )
 }
