@@ -9,22 +9,21 @@ const projects = [
     description:
       "A medicine auction and delivery platform that connects buyers and sellers in real-time. Features include live bidding, user authentication, and secure payments.",
     techStack: ["Next.js", "Node.js", "MongoDB", "Socket.io"],
-    github: "https://github.com/Abhijaiswal2522002/MedR",
-    demo: "https://med-r-c9vd.vercel.app/",
+    github: "https://github.com/Abhijaiswal2522002/swasth-route",
+    demo: "https://swasth-route.vercel.app/",
   },
   {
-    name: "TalentEzee",
+    name: "Naaulo",
     description:
-      "A comprehensive frontend onboarding module designed to manage influencer engagements with a clean, responsive interface.",
-    techStack: ["Next.js", "Redux", "PostgreSQL", "Tailwind"],
-    github: "https://github.com/Abhijaiswal2522002/TalentEzee",
-    demo: "https://talent-ezee.vercel.app/",
+      "A smart communication and automation platform that manages chatbot flows, user interactions, and real-time messaging across channels like Facebook, helping businesses streamline customer engagement.",
+    techStack: ["ASP.NET Core", "SQL Server", "Kafka", "SignalR", "JavaScript"], // update if different
+    demo: "https://naaulo.com/",
   },
   {
     name: "SchoolOne",
     description:
       "A centralized school management web app providing notes, lectures, events, tutor booking, and real-time announcements.",
-    techStack: [".NET", "Python", "SQL", "Docker"],
+    techStack: [".NET", "Python", "SQL", "Docker", "javascript"],
     demo: "https://www.schoolone.app/",
   },
   {
