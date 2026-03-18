@@ -42,14 +42,12 @@ const projects = [
     demo: "https://www.jureli.com/",
   },
   {
-    name: "TalentEzee - Influencer Engagement Platform",
+    name: "TalentEzee Platform",
     description:
       "A comprehensive frontend onboarding module built for TalentEzee.com, designed to manage influencer engagements with a clean, responsive interface.",
-    techStack: "Next.js, Redux, Tailwind CSS, PostgreSQL, UI/UX",
+    techStack: ["Next.js", "Redux", "Tailwind CSS", "PostgreSQL", "UI/UX"],
     github: "https://github.com/Abhijaiswal2522002/TalentEzee",
     demo: "https://talent-ezee.vercel.app/",
-    image: "/TalentEzee.png",
-    icons: [Code2, Database, Globe],
   }
 ]
 
