@@ -10,10 +10,9 @@ export default function Footer() {
         </div>
         
         <div className="flex gap-6 items-center">
-          <SocialLink href="https://github.com" icon={<Github size={16} />} />
-          <SocialLink href="https://linkedin.com" icon={<Linkedin size={16} />} />
-          <SocialLink href="https://twitter.com" icon={<Twitter size={16} />} />
-          <SocialLink href="mailto:example@gmail.com" icon={<Mail size={16} />} />
+          <SocialLink href="https://github.com/Abhijaiswal2522002" icon={<Github size={16} />} />
+          <SocialLink href="https://www.linkedin.com/in/abhishek-jaiswal-278890246/" icon={<Linkedin size={16} />} />
+          <SocialLink href="mailto:jaisabhishek834@gmail.com" icon={<Mail size={16} />} />
         </div>
       </div>
     </footer>
