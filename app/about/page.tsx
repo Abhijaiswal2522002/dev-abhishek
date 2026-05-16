@@ -75,10 +75,16 @@ export default function AboutPage() {
           </div>
 
           <div className="space-y-8 pl-4 border-l border-[#333333]">
+  <TimelineItem
+              role="Software Engineer"
+              company="Vest,inc"
+              date="2026-Present"
+              desc="Developing and maintaining robust VB.NET and SolidWorks API modules, managing application configurations and XML-based settings. Implementing new features, debugging issues, and collaborating directly with team members and clients to ensure smooth functionality and product improvements."
+            />
             <TimelineItem
-              role=".NET Software Engineer Intern"
+              role=".NET Software Engineer"
               company="Jureli Tech"
-              date="2025 – PRESENT"
+              date="2025 – 2026"
               desc="Developing robust ASP.NET MVC modules and managing SQL Server databases. Implementing secure JWT authentication and collaborating directly with clients."
               current
             />
