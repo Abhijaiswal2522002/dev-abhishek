@@ -3,10 +3,18 @@
 import { motion } from "framer-motion"
 
 const experiences = [
+  { 
+     position: "Software Engineer",
+    company: "VEST, Inc.",
+    period: "APRIL 2026-Present",
+    description:
+      "Contributing to the development and maintenance of CAD automation and engineering applications using VB.NET and SolidWorks API. Working with XML configurations, custom attributes, and application settings to manage and optimize system functionality. Collaborating with team members to implement new features, bug fixes, and enhancements, ensuring smooth performance and reliability across different modules and product versions.",
+    link: "https://www.vestusa.com/index.htm",
+  },
   {
-    position: ".NET Software Engineer Intern",
+    position: ".NET Software Engineer",
     company: "Jureli Tech",
-    period: "JUL 2025 - PRESENT",
+    period: "JUL 2025 - MARCH 2026",
     description:
       "Contributing to the development and maintenance of web applications using ASP.NET MVC and C#. Working with MS SQL Server databases to manage and optimize data operations. Collaborating with team members to implement secure authentication and role-based access controls, ensuring smooth functionality and security across modules.",
     link: "https://www.jureli.com/",
