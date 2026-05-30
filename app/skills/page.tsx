@@ -14,7 +14,7 @@ const skillCategories = [
   },
   {
     name: "Backend",
-    skills: [".NET Core", "ASP.NET MVC", "Node.js", "Express.js", "Django"],
+    skills: [".NET Core", "VB.NET", "ASP.NET MVC", "Node.js", "Express.js", "Django"],
   },
   {
     name: "Database",
@@ -26,7 +26,7 @@ const skillCategories = [
   },
   {
     name: "Cloud_DevOps",
-    skills: ["Git", "GitHub", "Docker", "AWS", "Vercel", "Linux CLI"],
+    skills: ["Git", "GitHub", "Docker", "AWS", "Vercel", "Linux CLI","Azure DevOps"],
   },
 ]
 

@@ -13,6 +13,13 @@ const projects = [
     demo: "https://swasth-route.vercel.app/",
   },
   {
+  name: "MDTools",
+  description:
+    "A SOLIDWORKS-integrated hydraulic manifold design software used for cavity creation, connectivity analysis, machining chart generation, design validation, and manufacturing documentation.",
+  techStack: ["VB.NET", "C++", "Win Merge", "SOLIDWORKS API", "Tortoise Git"],
+  demo: "https://www.vestusa.com/Manifold-Design-Software.htm"
+} ,
+  {
     name: "Naaulo",
     description:
       "A smart communication and automation platform that manages chatbot flows, user interactions, and real-time messaging across channels like Facebook, helping businesses streamline customer engagement.",
@@ -32,13 +39,6 @@ const projects = [
       "A dynamic survey platform allowing organizations to create, send, and track surveys with analytics and reporting features.",
     techStack: [".NET", "SQL", "Docker", "Bootstrap"],
     demo: "https://aarohanaconsulting.com/",
-  },
-  {
-    name: "Jureli Tech Website",
-    description:
-      "Official website for Jureli Tech, showcasing their educational software, AI/ML products, and automation tools.",
-    techStack: [".NET", "Bootstrap", "Python", "SQL"],
-    demo: "https://www.jureli.com/",
   },
   {
     name: "TalentEzee Platform",

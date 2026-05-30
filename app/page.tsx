@@ -16,14 +16,13 @@ const featuredProjects = [
     github: "https://github.com/Abhijaiswal2522002/MedR",
     demo: "https://swasth-route.vercel.app/",
   },
-  {
-    name: "TalentEzee",
-    description:
-      "A comprehensive frontend onboarding module designed to manage influencer engagements with a clean, responsive interface.",
-    techStack: ["Next.js", "Redux", "PostgreSQL", "Tailwind"],
-    github: "https://github.com/Abhijaiswal2522002/TalentEzee",
-    demo: "https://talent-ezee.vercel.app/",
-  },
+ {
+  name: "MDTools",
+  description:
+    "A SOLIDWORKS-integrated hydraulic manifold design software used for cavity creation, connectivity analysis, machining chart generation, design validation, and manufacturing documentation.",
+  techStack: ["VB.NET", "C++", "Win Merge", "SOLIDWORKS API", "Tortoise Git"],
+  demo: "https://www.vestusa.com/Manifold-Design-Software.htm"
+} ,
   {
     name: "SchoolOne",
     description:
@@ -173,11 +172,11 @@ export default function Home() {
         <div className="border border-[#333333] p-6 bg-[#111111]">
           <div className="flex flex-col md:flex-row justify-between gap-4">
             <div>
-              <div className="text-primary font-bold">.NET Software Engineer </div>
-              <div className="text-white text-xl">Jureli Tech</div>
+              <div className="text-primary font-bold">Associate Software Engineer </div>
+              <div className="text-white text-xl">Vest,Inc</div>
             </div>
             <div className="text-secondary font-bold self-start bg-secondary/10 px-3 py-1 border border-secondary/20">
-              JUL 2025 – PRESENT
+              MAY 2026 – PRESENT
             </div>
           </div>
           <p className="mt-4 text-[#888888] max-w-3xl">
